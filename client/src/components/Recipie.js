@@ -5,5 +5,3 @@ export const Recipie = () => {
     <div>Recipie</div>
   )
 }
-
-//test comment 

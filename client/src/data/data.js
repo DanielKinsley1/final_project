@@ -72,6 +72,7 @@ export const mealData = [
   {
     id: 5,
     name: 'cheeseless pizza',
+    rec: 'https://keytomylime.com/cheeseless-pizza/',
     category: 'pizza',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672324456/NetflixApp/cheeseless_pizza_bkuecz.jpg',
@@ -80,6 +81,7 @@ export const mealData = [
   {
     id: 6,
     name: 'Supreme Pizza',
+    rec: 'https://www.southernliving.com/recipes/supreme-pizza',
     category: 'pizza',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672324455/NetflixApp/Supreme_Pizza_jtvkj8.jpg',
@@ -88,6 +90,7 @@ export const mealData = [
   {
     id: 7,
     name: 'pepperoni pizza',
+    rec: 'https://bakerbynature.com/the-best-pepperoni-pizza-recipe/',
     category: 'pizza',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672324456/NetflixApp/pepperoni_pizza_axwdat.jpg',
@@ -96,6 +99,7 @@ export const mealData = [
   {
     id: 8,
     name: 'Cheese Pizza',
+    rec: 'https://www.foodandwine.com/recipes/classic-cheese-pizza',
     category: 'pizza',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672324456/NetflixApp/chinese_pizza_kgnbo1.jpg',
@@ -104,6 +108,7 @@ export const mealData = [
   {
     id: 8,
     name: 'African Salad',
+    rec: 'https://www.food.com/recipe/african-salad-233156',
     category: 'Salad',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672323870/NetflixApp/African_Salad_s7vgxn.png',
@@ -112,6 +117,7 @@ export const mealData = [
   {
     id: 9,
     name: 'Kale Salad',
+    rec: 'https://www.twopeasandtheirpod.com/simple-kale-salad/',
     category: 'salad',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672323860/NetflixApp/kale_salad_ogune3.jpg',
@@ -120,6 +126,7 @@ export const mealData = [
   {
     id: 10,
     name: 'Ceasar Salad',
+    rec: 'https://natashaskitchen.com/caesar-salad-recipe/',
     category: 'salad',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672323859/NetflixApp/caesar-salad-with-tuna-30216-1_noflfd.jpg',
@@ -128,6 +135,7 @@ export const mealData = [
   {
     id: 11,
     name: 'Loaded Salad',
+    rec: 'https://greenhealthycooking.com/loaded-chopped-salad/',
     category: 'salad',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672323860/NetflixApp/loaded_salad_qq5jup.jpg',
@@ -136,6 +144,7 @@ export const mealData = [
   {
     id: 12,
     name: 'chiken shawarma',
+    rec: 'https://www.recipetineats.com/chicken-sharwama-middle-eastern/',
     category: 'chiken',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672323737/NetflixApp/chiken_shawarma_c0ysna.jpg',
@@ -144,6 +153,7 @@ export const mealData = [
   {
     id: 13,
     name: 'Wings',
+    rec: 'https://tastesbetterfromscratch.com/crispy-baked-chicken-wings/',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672322922/NetflixApp/chicken-wings_lv3zc9.jpg',
@@ -152,6 +162,7 @@ export const mealData = [
   {
     id: 14,
     name: 'Roasted Chicken',
+    rec: 'https://www.recipetineats.com/roast-chicken/',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672322922/NetflixApp/roast-chicken_nrc6r8.jpg',
@@ -160,6 +171,7 @@ export const mealData = [
   {
     id: 15,
     name: 'Chicken Tenders',
+    rec: 'https://www.onceuponachef.com/recipes/buttermilk-fried-chicken-tenders-2.html',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672322923/NetflixApp/chicken_tenders_quel6y.jpg',
@@ -245,3 +257,4 @@ export const categories = [
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672176749/NetflixApp/appple_pie_yxfxpm.png'
   },
 ];
+

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { BsPerson } from 'react-icons/bs'
 import { MdHelp, MdOutlineFavorite } from 'react-icons/md'
 import { Nav } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+
 
 const TopNav = () => {
     const [sideNav, setSideNav] = useState(false)
@@ -27,12 +28,7 @@ const TopNav = () => {
                     <p className='p-2 text-bold'>Recipies</p>
                 </div>
             </div>
-            <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <AiOutlineSearch size={25} />
-                <input className='bg-transparent p-2 w-full focus:outline-none'
-                    type='text'
-                    placeholder='search meals' />
-            </div>
+
             <button className='bg-orange-700 text-white hidden md:flex items-center py-2 rounded-full' type="submit" onClick={handleClick}> {/* Login button and styling  */}
                 Login
             </button>

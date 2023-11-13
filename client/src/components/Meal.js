@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { mealData } from '../data/data'
 import { ArrowSmRightIcon } from '@heroicons/react/outline'
+import { useNavigate } from 'react-router-dom'
+
 
 const Meal = () => {
+    const navigate = useNavigate();
     const [foods, setFoods] = useState(mealData)
     const filterCat = (category) => {
         setFoods(
@@ -11,6 +14,12 @@ const Meal = () => {
             })
         )
     }
+    // const handleButtonClick = async(item.id) => {
+
+    // navigate(item.rec)
+    // console.log(`Button clicked for item with ID ${item.rec}`);
+    //};
+
     return (
         <div className='max-w-[1520px] m-auto px-4 py-12'>
             <h1 className='text-orange-500 font-bold text-2xl text-center py-2'>Our Meal</h1>
@@ -42,8 +51,8 @@ const Meal = () => {
                                 <p className='font-bold'>{item.name}</p>
                                 <p className='bg-orange-700 h-18 w-18 rounded-full -mt-10 text-white py-4 px-2 border-8 font-bold'>{item.price}</p>
                             </div>
-                            <div className='pl-2 py-4 -mt-7'>
-                                <p className='flex items-center text-indigo-600'>View More<ArrowSmRightIcon className='w-5 ml-2' /></p>
+                            <div key={item.id} className='pl-2 py-4 -mt-7'>
+                                <button className='flex items-center text-indigo-600' onClick={() => window.open(item.rec)}>View More<ArrowSmRightIcon className='w-5 ml-2' /></button>
                             </div>
                         </div>
                     ))

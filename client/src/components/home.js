@@ -4,7 +4,7 @@ import TopPicks from './TopPicks'
 import Meal from './Meal'
 import Categories from './Categories'
 import TopNav from './TopNav'
-import { Recipie } from './Recipie'
+
 
 function Home() {
     return (
@@ -14,7 +14,7 @@ function Home() {
             <TopPicks />
             <Meal />
             <Categories />
-            <Recipie />
+
 
         </div>
     )

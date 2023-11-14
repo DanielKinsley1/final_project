@@ -1,12 +1,11 @@
-import React from 'react'
-
-import { useState } from 'react';
-
+import React, { useState } from 'react';
 
 const AccountInfoPage = () => {
     const [userInfo, setUserInfo] = useState({
         username: 'JohnDoe',
         email: 'john.doe@example.com',
+        firstName: 'John',
+        lastName: 'Doe',
         // Add more user information as needed
     });
 
@@ -22,6 +21,14 @@ const AccountInfoPage = () => {
                     <label>Email: </label>
                     <span>{userInfo.email}</span>
                 </div>
+                <div>
+                    <label>First Name: </label>
+                    <span>{userInfo.firstName}</span>
+                </div>
+                <div>
+                    <label>Last Name: </label>
+                    <span>{userInfo.lastName}</span>
+                </div>
                 {/* Add more user information fields here */}
 
                 {/* You can also include buttons to edit or update user information */}
@@ -33,3 +40,5 @@ const AccountInfoPage = () => {
 }
 
 export default AccountInfoPage;
+
+

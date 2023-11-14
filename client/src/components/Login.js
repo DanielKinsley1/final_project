@@ -1,23 +1,21 @@
-import React, { Component } from 'react';
-import { useState } from 'react';
-function RegistrationForm() {
-    const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
+import React, { useState } from 'react';
 
-
+function LoginForm() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleInputChange = (event) => {
-        event.preventDefault()
+        event.preventDefault();
     }
 
     const handleSubmit = (event) => {
-        const state = {
+        const credentials = {
             username,
-            password
+            password,
         };
-        console.log(state)
+        console.log(credentials);
         event.preventDefault();
-        // Handle form submission here (e.g., authentication)
+        // Handle login logic here (e.g., send the data to the server for authentication)
     }
 
     return (
@@ -38,10 +36,11 @@ function RegistrationForm() {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password"
                 />
-                <button type="submit" className='text-orange-500 font-bold text-2xl text-center py-2' onClick={handleSubmit}>Submit</button>
+                <button type="submit" className='text-orange-500 font-bold text-2xl text-center py-2' onClick={handleSubmit}>Login</button>
             </form>
             <h3 >New User? <cite><a href="/register">Register</a></cite></h3>
         </div>
     );
 }
-export default RegistrationForm;
+
+export default LoginForm;

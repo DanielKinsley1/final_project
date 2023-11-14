@@ -4,10 +4,6 @@ function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleInputChange = (event) => {
-        event.preventDefault();
-    }
-
     const handleSubmit = (event) => {
         const credentials = {
             username,
@@ -19,26 +15,40 @@ function LoginForm() {
     }
 
     return (
-        <div>
-            <h2 className='text-orange-500 font-bold text-2xl text-center py-2'>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Username"
-                />
-                <input
-                    type="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                <button type="submit" className='text-orange-500 font-bold text-2xl text-center py-2' onClick={handleSubmit}>Login</button>
+        <div className="max-w-md mx-auto my-8">
+            <h2 className="text-orange-500 font-bold text-3xl text-center mb-4">Login</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                    <input
+                        type="text"
+                        name="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Username"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+                    />
+                </div>
+                <div>
+                    <input
+                        type="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+                    />
+                </div>
+                <button
+                    type="submit"
+                    className="w-full bg-orange-500 text-white font-bold text-xl py-2 rounded-md hover:bg-orange-600 focus:outline-none focus:shadow-outline-orange"
+                    onClick={handleSubmit}
+                >
+                    Login
+                </button>
             </form>
-            <h3 >New User? <cite><a href="/register">Register</a></cite></h3>
+            <div className="mt-4 text-center">
+                <h3>New User? <cite className="text-orange-500"><a href="/register">Register</a></cite></h3>
+            </div>
         </div>
     );
 }

@@ -15,7 +15,6 @@ function Home() {
             <TopPicks />
             <Meal />
             <Categories />
-            <ErrorPage />
 
 
 

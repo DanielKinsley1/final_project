@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { mealData } from '../data/data'
 import { ArrowSmRightIcon } from '@heroicons/react/outline'
 import { useNavigate } from 'react-router-dom'
+import { loggedInUser } from '../App'
 
 
 const Meal = () => {
@@ -52,7 +53,7 @@ const Meal = () => {
                                 <p className='bg-orange-700 h-18 w-18 rounded-full -mt-10 text-white py-4 px-2 border-8 font-bold'>{item.price}</p>
                             </div>
                             <div key={item.id} className='pl-2 py-4 -mt-7'>
-                                <button className='flex items-center text-indigo-600' onClick={() => window.open(item.rec)}>View More<ArrowSmRightIcon className='w-5 ml-2' /></button>
+                                <button className='flex items-center text-indigo-600' onClick={() => loggedInUser ? window.open(item.rec) : navigate("/Error")}>View More<ArrowSmRightIcon className='w-5 ml-2' /></button>
                             </div>
                         </div>
                     ))

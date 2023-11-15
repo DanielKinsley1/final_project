@@ -59,6 +59,11 @@ public User getUserById(Long id)
 
     }
 
+    @Override 
+    public User getUserByEmailAndPassword(String email, String password){
+        User user = userRepository.findByEmailAndPassword(email, password);
+        return user;
+    }
 
 
 

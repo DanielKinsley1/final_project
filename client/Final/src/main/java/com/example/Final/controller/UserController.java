@@ -2,6 +2,7 @@ package com.example.Final.controller;
 
 import com.example.Final.dto.UserDto;
 import com.example.Final.entity.User;
+import com.example.Final.exception.ResourceNotFoundException;
 import com.example.Final.repository.UserRepository;
 import com.example.Final.service.UserService;
 import lombok.AllArgsConstructor;
@@ -48,10 +49,26 @@ public class UserController {
         return ResponseEntity.ok(userDto);
     }
 
-    // Build Delete Employee REST API
+    // Build Delete Users REST API
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Long userId) {
         userService.deleteUser(userId);
         return ResponseEntity.ok("User deleted successfully!>}");
+    }
+
+    //Logging in users API
+    @PostMapping("login")
+    public ResponseEntity<?> login(@RequestBody User user) {
+        // UserDto savedUser = UserService.createUser(userDto);
+        try {
+        User loginData = userService.getUserByEmailAndPassword(user.getEmail(), user.getPassword());
+
+        if (loginData == null) {
+            throw new ResourceNotFoundException("invalid username or password");
+        }
+        return new ResponseEntity<>(loginData, HttpStatus.OK);
+    } catch(Exception e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT); 
+    }
     }
 }

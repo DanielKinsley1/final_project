@@ -5,6 +5,7 @@ import Meal from './Meal'
 import Categories from './Categories'
 import TopNav from './TopNav'
 
+
 function Home() {
     return (
         <div>
@@ -13,6 +14,8 @@ function Home() {
             <TopPicks />
             <Meal />
             <Categories />
+
+
 
         </div>
     )

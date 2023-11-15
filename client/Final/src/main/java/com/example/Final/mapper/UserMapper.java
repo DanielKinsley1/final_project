@@ -11,7 +11,8 @@ public class UserMapper {
             user.getId(),
             user.getFirstName(),
             user.getLastName(),
-            user.getEmail()
+            user.getEmail(),
+            user.getPassword()
 
         );
     }
@@ -21,7 +22,8 @@ public class UserMapper {
                 userDto.getId(),
                 userDto.getFirstName(),
                 userDto.getLastName(),
-                userDto.getEmail()
+                userDto.getEmail(),
+                userDto.getPassword()
 
         );
     }

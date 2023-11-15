@@ -10,14 +10,19 @@ public class UserDto {
     private String firstName;
     private String lastName;
     private String email;
+    private String password;
 
 
 
-    public UserDto(Long id, String firstName, String lastName, String email){
+    public UserDto(Long id, String firstName, String lastName, String email, String password){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.password = password;
+    }
+    public String getPassword() {
+        return password;
     }
     public Long getId() {
         return id;
@@ -34,6 +39,9 @@ public class UserDto {
     public String getEmail() {
         return email;
     }
+    public String password(){
+        return password;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -48,5 +56,8 @@ public class UserDto {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+    public void setPassword(String password){
+        this.password = password;
     }
 }

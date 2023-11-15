@@ -4,6 +4,7 @@ import LoginForm from "./Login";
 import Home from "./home";
 import RegistrationForm from "./Register";
 import ListUsers from "./ListUser";
+import AccountInfoPage from "./MyAccount";
 
 export default function Routed() {
 
@@ -14,6 +15,7 @@ export default function Routed() {
                 <Route path="/Login" element={<LoginForm />} />
                 <Route path="/Register" element={<RegistrationForm />} />
                 <Route path="/List" element={<ListUsers />} />
+                <Route path="/MyAccount" element={<AccountInfoPage />} />
             </Routes>
         </Router>
     )

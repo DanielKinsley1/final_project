@@ -5,6 +5,8 @@ import Home from "./home";
 import RegistrationForm from "./Register";
 import ListUsers from "./ListUser";
 import AccountInfoPage from "./MyAccount";
+import SecretPage from "./Error";
+import ErrorPage from "./Error";
 
 export default function Routed() {
 
@@ -16,6 +18,7 @@ export default function Routed() {
                 <Route path="/Register" element={<RegistrationForm />} />
                 <Route path="/List" element={<ListUsers />} />
                 <Route path="/MyAccount" element={<AccountInfoPage />} />
+                <Route path="/Error" element={<ErrorPage />} />
             </Routes>
         </Router>
     )

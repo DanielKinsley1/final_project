@@ -14,8 +14,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-// @CrossOrigin("*")
-@CrossOrigin(origins = "http://localhost:3000") // crosses over into frontend to allow data to be pulled
+@CrossOrigin("*")
 @RequestMapping("/api/users")
 public class UserController {
 
@@ -36,7 +35,7 @@ public class UserController {
     }
 
     // Build Get All Users API
-    @GetMapping // may need to add a mapping here ex. @GetMapping("/add")
+    @GetMapping
     public ResponseEntity<List<UserDto>> getAllUsers() {
         List<UserDto> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
@@ -50,20 +49,20 @@ public class UserController {
         return ResponseEntity.ok(userDto);
     }
 
-    // Build Delete Users REST API
+    // Build Delete Employee REST API
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Long userId) {
         userService.deleteUser(userId);
         return ResponseEntity.ok("User deleted successfully!>}");
     }
 
+    
     //Logging in users API
     @PostMapping("login")
     public ResponseEntity<?> login(@RequestBody User user) {
         // UserDto savedUser = UserService.createUser(userDto);
         try {
         User loginData = userService.getUserByEmailAndPassword(user.getEmail(), user.getPassword());
-
         if (loginData == null) {
             throw new ResourceNotFoundException("invalid username or password");
         }

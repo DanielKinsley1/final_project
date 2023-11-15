@@ -4,6 +4,7 @@ import TopPicks from './TopPicks'
 import Meal from './Meal'
 import Categories from './Categories'
 import TopNav from './TopNav'
+import ErrorPage from './Error'
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
             <TopPicks />
             <Meal />
             <Categories />
+            <ErrorPage />
 
 
 

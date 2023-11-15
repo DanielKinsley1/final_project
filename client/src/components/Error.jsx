@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-
+import LoginForm from "./Login";
 const ErrorPage = () => {
     useEffect(() => {
         // Check if the user is logged in
@@ -8,10 +8,10 @@ const ErrorPage = () => {
 
         // If the user is logged in, redirect to the Login page
         if (user) {
-
             return <Navigate to="/" />;
         } else {
             return <Navigate to="/Login" />;
+
         }
     }, []);
 
@@ -28,6 +28,6 @@ const ErrorPage = () => {
             </div>
         </div>
     );
-}
+};
 
 export default ErrorPage;

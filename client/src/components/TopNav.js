@@ -65,18 +65,6 @@ const TopNav = () => {
                                 </a>
                             </li>
 
-                            <li className='text-xl py-4 flex'>
-                                <MdOutlineFavorite size={25}
-                                    className='mr-4 text-white bg-black rounded-full'
-                                />
-                                Favorites
-                            </li>
-                            <li className='text-xl py-4 flex'>
-                                <MdHelp size={25}
-                                    className='mr-4 text-white bg-black rounded-full'
-                                />
-                                Help
-                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -130,18 +118,7 @@ const TopNav = () => {
                                 </a>
                             </li>
 
-                            <li className='text-xl py-4 flex'>
-                                <MdOutlineFavorite size={25}
-                                    className='mr-4 text-white bg-black rounded-full'
-                                />
-                                Favorites
-                            </li>
-                            <li className='text-xl py-4 flex'>
-                                <MdHelp size={25}
-                                    className='mr-4 text-white bg-black rounded-full'
-                                />
-                                Help
-                            </li>
+
                         </ul>
                     </nav>
                 </div>

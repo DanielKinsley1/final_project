@@ -257,3 +257,4 @@ export const categories = [
       'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672176749/NetflixApp/appple_pie_yxfxpm.png'
   },
 ];
+

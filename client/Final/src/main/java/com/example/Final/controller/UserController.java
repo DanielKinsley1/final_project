@@ -14,7 +14,8 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@CrossOrigin("*")
+// @CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000") // crosses over into frontend to allow data to be pulled
 @RequestMapping("/api/users")
 public class UserController {
 
@@ -35,7 +36,7 @@ public class UserController {
     }
 
     // Build Get All Users API
-    @GetMapping
+    @GetMapping // may need to add a mapping here ex. @GetMapping("/add")
     public ResponseEntity<List<UserDto>> getAllUsers() {
         List<UserDto> users = userService.getAllUsers();
         return ResponseEntity.ok(users);

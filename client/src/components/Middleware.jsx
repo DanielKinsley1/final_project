@@ -2,7 +2,7 @@ import axios from "axios";
 
 class Middleware {
     getAllUsers() {
-        return axios.get("http://localhost:8080/api/users")
+        return axios.get("http://localhost:8080/api/users") //if dont work try "http://localhost:8080/api/users/add"
     }
     login(user){
         return axios.post("http://localhost:8080/api/users/login", user)

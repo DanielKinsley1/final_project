@@ -6,7 +6,7 @@ import RegistrationForm from "./Register";
 import ListUsers from "./ListUser";
 import ErrorPage from "./Error";
 import AccountInfoPage from "./MyAccount";
-
+// Routing from page to page
 export default function Routed() {
 
     return (

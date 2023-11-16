@@ -12,13 +12,14 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+//Creating table in database for users
 @Table(name = "Users")
 
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+//creating columns for table
     @Column (name = "password")
     private String password;
 
@@ -28,6 +29,8 @@ public class User {
     @Column(name = "lastName")
     private String lastName;
 
+
+    //Gets and setters 
     public Long getId() {
         return id;
     }

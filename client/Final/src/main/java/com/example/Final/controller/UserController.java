@@ -18,10 +18,12 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class UserController {
 
+    //annotation is placed on the constructor of the class, which is commonly used for constructor injection
     @Autowired
     private UserService userService;
     private UserRepository userRepository;
 
+    //The method is annotated with @PostMapping("save"), indicating that it handles HTTP POST requests for the "/save" API.
     @PostMapping("save")
     public ResponseEntity<?> createUser(@RequestBody User user) {
         // UserDto savedUser = UserService.createUser(userDto);
@@ -29,6 +31,7 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
+    //The method calls userService.getUserById(id) to retrieve a User based on the provided ID
     @GetMapping("{id}")
     public User getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
@@ -58,6 +61,11 @@ public class UserController {
 
     
     //Logging in users API
+    //The method is mapped to the "/login" endpoint using @PostMapping("login")
+    //It attempts to retrieve a user from the userService based on the provided email and password using userService.getUserByEmailAndPassword(user.getEmail(), user.getPassword()) 
+    //If the user is not found (loginData == null), it throws a ResourceNotFoundException with the message "invalid username or password".
+    //If an exception occurs during the process, it catches the exception (catch(Exception e)) and returns a ResponseEntity with the exception message and HttpStatus.CONFLICT
+    //If the authentication is successful, it returns a ResponseEntity with the retrieved user and HttpStatus.OK
     @PostMapping("login")
     public ResponseEntity<?> login(@RequestBody User user) {
         // UserDto savedUser = UserService.createUser(userDto);

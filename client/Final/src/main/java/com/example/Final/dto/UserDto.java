@@ -13,7 +13,9 @@ public class UserDto {
     private String password;
 
 
-
+// The main purpose of a DTO is to protect the data and transport it between 
+//different parts of a system, providing a simple and consistent interface.
+//Getters and Setter are set here
     public UserDto(Long id, String firstName, String lastName, String email, String password){
         this.id = id;
         this.firstName = firstName;

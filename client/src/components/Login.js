@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Middleware from './Middleware';
 import { useNavigate } from 'react-router-dom';
 
+
 function LoginForm() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
@@ -20,11 +21,14 @@ function LoginForm() {
             email,
             password
         };
+        //Outputs user to console
         console.log(user)
+        ////Try is used to handle synchronous errors that might occur in the code within the try block
         try {
             Middleware.login(user).then(
                 async (response) => {
                     console.log(response.data)
+                    //Outputs the data from the response to the console.
 
                     // store the user in localStorage
                     localStorage.setItem('user', JSON.stringify(response.data))

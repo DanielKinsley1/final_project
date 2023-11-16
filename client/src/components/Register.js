@@ -21,13 +21,16 @@ function RegistrationForm() {
             firstName,
             lastName,
         };
+        //Outputs the user object to the console
+        //Try is used to handle synchronous errors that might occur in the code within the try block
         console.log(user);
         try{
+            //Initiates an asynchronous operation using the Middleware.register function. The then method is used to handle the resolved value of the promise returned by Middleware.register. Inside the then block
             Middleware.register(user).then(
             async(response) => {
                 console.log(response.data)
                 navigate("/")
-            
+            //Outputs the data from the response to the console then navigates back to the home page
             }
          )
         }
